@@ -1,0 +1,32 @@
+body {
+  background-image: url("image0.jpg");
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 40px;
+  overflow: hidden;
+}
+
+.nav-links a {
+  font-size: 15px;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  position: relative;
+  display: block;
+  transition: transform 0.4s;
+}
+
+.nav-links a::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 100%;
+}
+
+.nav-links a:hover {
+  transform: translateY(-100%);
+}
